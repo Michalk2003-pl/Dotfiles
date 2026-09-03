@@ -1,0 +1,86 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display": {
+    "key": {
+      "width": 10
+    },
+    "separator": ""
+  },
+  "logo": {
+    "type": "auto",
+    "source": "~/.config/fastfetch/frieren.txt",
+    "color": {
+      "1": "#ccccff",
+      "2": "#c6d2ff",
+      "3": "#c1d7ff",
+      "4": "#bedcff",
+      "5": "#bde0fe"
+    },
+    "padding": {
+      "top": 1,
+      "left": 1
+    }
+  },
+  "modules": [
+    "break",
+    {
+      "type": "command",
+      "key": "󰀄 USER",
+      "keyColor": "#ccccff",
+      "text": "echo $USER"
+    },
+    {
+      "type": "os",
+      "key": "󰣇 OS",
+      "keyColor": "#c9cfff",
+      "format": "{name} {version-id}"
+    },
+    {
+      "type": "command",
+      "key": "󰌽 KER",
+      "keyColor": "#c6d2ff",
+      "text": "echo $(uname -r | cut -d- -f1)"
+    },
+    {
+      "type": "packages",
+      "key": "󰏗 PKG",
+      "keyColor": "#c4d4ff",
+      "format": "{all}"
+    },
+    {
+      "type": "terminal",
+      "key": "󰆍 TERM",
+      "keyColor": "#c1d7ff",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "shell",
+      "key": "󰞷 SHELL",
+      "keyColor": "#c0d9ff",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "uptime",
+      "keyColor": "#bedcff",
+      "key": "󰥔 UP"
+    },
+    {
+      "type": "memory",
+      "key": "󰍛 RAM",
+      "keyColor": "#bddeff",
+      "format": "{used} / {total} ({percentage})"
+    },
+    {
+      "type": "disk",
+      "folders": "/",
+      "key": "󰋊 SSD",
+      "keyColor": "#bde0fe",
+      "format": "{size-used} / {size-total} ({size-percentage})"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m \u001b[91m \u001b[92m \u001b[93m \u001b[94m \u001b[95m \u001b[96m \u001b[97m"
+    },
+    "break"
+  ]
+}
