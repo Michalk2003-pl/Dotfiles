@@ -1,0 +1,17 @@
+[Unit]
+Description=Random Wallpaper Changer
+# Must have D-Bus socket and full graphical session
+After=dbus.socket graphical-session.target gnome-session-initialized.target
+Requires=dbus.socket
+PartOf=graphical-session.target
+
+[Service]
+Type=oneshot
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+# Let the session fully settle before touching gsettings
+ExecStart=/home/mkul/.local/bin/wallpaper-changer.sh
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical-session.target
