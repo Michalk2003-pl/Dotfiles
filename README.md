@@ -4,7 +4,8 @@ This is my personal config. It uses chezmoi as manager.
 
 ## Software config
 
-- Zsh
 - Git
-- Oh-my-posh
-- fastfetch
+- Ghostty
+- Zsh
+  - Oh-my-posh
+  - fastfetch
