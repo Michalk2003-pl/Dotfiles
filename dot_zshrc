@@ -4,6 +4,16 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
+# === Ztyle
+zstyle ':omz:plugins:eza' 'dirs-first' yes
+zstyle ':omz:plugins:eza' 'git-status' yes
+zstyle ':omz:plugins:eza' 'header' yes
+zstyle ':omz:plugins:eza' 'icons' yes
+
+# === OPM
+zinit snippet OMZL::directories.zsh 
+zinit snippet OMZP::eza  
+
 # === Plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -12,12 +22,25 @@ zinit light zsh-users/zsh-autosuggestions
 # === Autocompletion
 autoload -Uz compinit && compinit -C
 
+# === History
+HISTFILE=~/.zshistory
+HISTSIZE=10000
+SAVEHIST=50000
+
+setopt inc_append_history
+
 # === Prompt
 eval "$(oh-my-posh init zsh --config '~/.config/omp/config.jsonc')"
 
 # === Eval
 eval "$(zoxide init zsh)"
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
+
+# === Alias
+
+# Editors
+alias code="codium"
+alias vim="nvim"
 
 # === Bling
 if [ "$TERM_PROGRAM" = "ghostty" ]; then

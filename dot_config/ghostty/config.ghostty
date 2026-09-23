@@ -1,0 +1,8 @@
+# === General
+theme = Breeze
+shell-integration = zsh
+
+# === Tabs
+gtk-wide-tabs = false
+keybind = ctrl+w=new_tab
+keybind = ctrl+q=close_tab

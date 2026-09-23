@@ -31,9 +31,9 @@
     },
     {
       "type": "os",
-      "key": "󰣇 OS",
+      "key": " OS",
       "keyColor": "#c9cfff",
-      "format": "{name} {version-id}"
+      "format": "{pretty-name}"
     },
     {
       "type": "command",
@@ -45,24 +45,19 @@
       "type": "packages",
       "key": "󰏗 PKG",
       "keyColor": "#c4d4ff",
-      "format": "{all}"
-    },
-    {
-      "type": "terminal",
-      "key": "󰆍 TERM",
-      "keyColor": "#c1d7ff",
-      "format": "{pretty-name}"
-    },
-    {
-      "type": "shell",
-      "key": "󰞷 SHELL",
-      "keyColor": "#c0d9ff",
-      "format": "{pretty-name}"
+      "format": "{pacman} + {flatpak-system}"
     },
     {
       "type": "uptime",
       "keyColor": "#bedcff",
       "key": "󰥔 UP"
+    },
+    {
+      "type": "disk",
+      "keyColor": "#bedcff",
+      "key": " AGE",
+      "folders": "/",
+      "format": "{days} Days"
     },
     {
       "type": "memory",
@@ -77,6 +72,7 @@
       "keyColor": "#bde0fe",
       "format": "{size-used} / {size-total} ({size-percentage})"
     },
+    "break",
     {
       "type": "custom",
       "format": "\u001b[90m \u001b[91m \u001b[92m \u001b[93m \u001b[94m \u001b[95m \u001b[96m \u001b[97m"
